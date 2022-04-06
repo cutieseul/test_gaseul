@@ -1,0 +1,12 @@
+.bbsTitle {
+	text-decoration: none;
+	color:black;
+}
+.serviceCenter {
+	text-decoration : none;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
