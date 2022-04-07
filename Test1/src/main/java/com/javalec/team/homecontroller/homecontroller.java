@@ -66,7 +66,7 @@ public class homecontroller extends HttpServlet {
 			viewPage = "serviceCenter.jsp";
 			break;
 		
-		case("/serviceCenter1vs1.do"): // 1:1 臾몄쓽濡� 媛�湲�
+		case("/serviceCenter1vs1.do"): // 1:1 
 			command = new ServiceCenter1vs1_Command();
 			command.execute(request, response);
 			viewPage = "serviceCenter1vs1.jsp";
@@ -75,33 +75,62 @@ public class homecontroller extends HttpServlet {
 		case("/serviceCenterWrite.do"): // 
 			viewPage = "serviceCenterWrite.jsp";
 			break;
-		
-		case("/studentCategory.do"): // 학생용의자카테고리.do
+			
+			// category.do
+		case("/studentCategory.do"): 
 			command = new StudentCategory_Command();
 			command.execute(request, response);
 			viewPage = "studentCategory.jsp";
 			break;
 			
-		case("/officeCategory.do"): // 사무용의자카테고리.do
+			
+		case("/officeCategory.do"): 
 			command = new OfficeCategory_Command();
 			command.execute(request, response);
 			viewPage = "officeCategory.jsp";
 			break;
 			
-		case("/interiorCategory.do"): // 인테리어용의자카테고리.do
+		case("/interiorCategory.do"): 
 			command = new InteriorCategory_Command();
 			command.execute(request, response);
 			viewPage = "interiorCategory.jsp";
 			break;
 			
-		case("/stoolCategory.do"): // 스툴&바의자카테고리.do
+		case("/stoolCategory.do"): 
 			command = new StoolCategory_Command();
 			command.execute(request, response);
 			viewPage = "stoolCategory.jsp";
 			break;
+			//category.do - end
 			
-		
+			//DetailPage.do
+		case("/studentDetail.do"): 
+			command = new StudentCategory_Command();
+			command.execute(request, response);
+			viewPage = "studentCategory.jsp";
+			break;
+			
+			
+		case("/officeDetail.do"): 
+			command = new OfficeCategory_Command();
+			command.execute(request, response);
+			viewPage = "officeCategory.jsp";
+			break;
+			
+		case("/interiorDetail.do"): 
+			command = new InteriorCategory_Command();
+			command.execute(request, response);
+			viewPage = "interiorCategory.jsp";
+			break;
+			
+		case("/stoolDetail.do"): 
+			command = new StoolCategory_Command();
+			command.execute(request, response);
+			viewPage = "stoolCategory.jsp";
+			break;
 		} // switch(com)
+		
+		
 		
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);

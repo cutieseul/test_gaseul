@@ -103,10 +103,13 @@
 	
 	
 	<c:forEach items="${list}" var="dto">
+	
 	<h5>${dto.pCode}</h5>
 	<h5>${dto.pCategoryname}</h5>
 	<h4>${dto.pName}</h4>
+	<a href="studentDetail.do?pCode = ${dto.pCode}">
 	<img src="${dto.pImg_main}" width="300">
+	</a>
 	<h4>재고 : ${dto.pQuantity}</h4>
 	
 	</c:forEach>
