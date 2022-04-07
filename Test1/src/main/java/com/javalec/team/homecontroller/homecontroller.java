@@ -85,13 +85,15 @@ public class homecontroller extends HttpServlet {
 			
 			
 			
-			// category.do
+			// allcategory.do
 			
 		case("/allCategory.do"): 
 			command = new AllCategory_Command();
 			command.execute(request, response);
-			viewPage = "allcategory.jsp";
+			viewPage = "allCategory.jsp";
 			break;
+			
+			
 			
 		case("/studentCategory.do"): 
 			command = new StudentCategory_Command();
