@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.javalec.team.dao.SelectCategory_dao;
 import com.javalec.team.dto.ProductReview_dto;
 
-public class StoolCategory_Command implements PCommand {
+public class AllCategory_Command implements PCommand {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
@@ -16,8 +16,9 @@ public class StoolCategory_Command implements PCommand {
 
 		
 		SelectCategory_dao dao = new SelectCategory_dao();
-		ArrayList<ProductReview_dto> dtos = dao.tlist();
+		ArrayList<ProductReview_dto> dtos = dao.all();
 		request.setAttribute("list", dtos);
+		
 	}
 
 }

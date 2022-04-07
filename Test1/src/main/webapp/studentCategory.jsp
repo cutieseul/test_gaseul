@@ -1,9 +1,8 @@
-<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@page import = "java.sql.*" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
 <!-- 부트스트랩 css -->
@@ -97,31 +96,18 @@
 	</section>
 	<!-- Bread Crumb End -->
 	
-
-	
-	<!-- 여기부터 넣으시면 됩니다 Start -->
-	
-	
+	<!-- 스툴 / 바 의자 카테고리 Start -->
 	<c:forEach items="${list}" var="dto">
 	
-	<h5>${dto.pCode}</h5>
 	<h5>${dto.pCategoryname}</h5>
 	<h4>${dto.pName}</h4>
-	<a href="studentDetail.do?pCode = ${dto.pCode}">
+	<a href="studentDetail.do?pCode=${dto.pCode}">
 	<img src="${dto.pImg_main}" width="300">
 	</a>
 	<h4>재고 : ${dto.pQuantity}</h4>
 	
 	</c:forEach>
-	
-	
-	
-	<!-- End -->
-	
-	
-	
-	
-	
+	<!-- 스툴 / 바 의자 카테고리 End -->
 	
 	<!-- Footer start -->
 	<footer >

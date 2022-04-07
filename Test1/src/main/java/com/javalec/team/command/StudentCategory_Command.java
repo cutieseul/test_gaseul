@@ -15,8 +15,9 @@ public class StudentCategory_Command implements PCommand {
 		// TODO Auto-generated method stub
 		
 		SelectCategory_dao dao = new SelectCategory_dao();
-		ArrayList<ProductReview_dto> dtos = dao.list();
+		ArrayList<ProductReview_dto> dtos = dao.slist();
 		request.setAttribute("list", dtos);
+		
 	}
 	}
 

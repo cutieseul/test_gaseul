@@ -19,6 +19,17 @@
 	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 	crossorigin="anonymous"></script>
 <script type="js/main.js"></script>
+<style type="text/css">
+.cart {
+	
+	background-color: #f8f9fa;
+}
+
+.buynow{
+
+	background-color: #696464;
+}
+</style>
 
 <title>홈페이지</title>
 
@@ -94,9 +105,39 @@
 	</section>
 	<!-- Bread Crumb End -->
 	
-	<!-- 여기부터 넣으시면 됩니다 Start -->
 	
-	<!-- End -->
+	
+	<!-- 제품정보 Start -->
+	
+	
+	<div class="row" style="padding-left: 500px;">
+		<div class="col-md-6" style="width: 324px;">
+		<img src="${detail.pImg_main }" width="350">
+		<h6>${detail.pCode }</h6>
+		<button type="button" class="btn btn-default btn-xs" disabled="disabled">${detail.pQuantity }</button>
+		</div>
+		<div class="col-md-6" style="padding-bottom: 156px;border-left-width: 0px;padding-left: 67px;">
+			<div><h5 style="padding-top: 27px;">${detail.pName } </h5></div>
+			<div style="padding-top: 143px;">
+			<h2>59000 원</h2>
+			<a class="cart btn btn-default btn-lg" href="#" role="button">장바구니</a>
+			<a class="buynow btn btn-default btn-lg" href="#" role="button" style="border-left-width: 0px;margin-left: 25px;">바로구매</a>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- 제품정보 End -->
+	
+
+	<!-- 상세정보 Start -->
+	<div style="padding-left: 407px;padding-top: 147px;">
+	<div ><img src="${detail.pImg_detail }"></div>
+	</div>
+	<!-- 상세정보 End -->
+	
+	
+	
 	
 	<!-- Footer start -->
 	<footer >

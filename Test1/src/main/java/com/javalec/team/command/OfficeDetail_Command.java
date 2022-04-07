@@ -1,25 +1,23 @@
-package studentDetail;
+package com.javalec.team.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.javalec.team.command.PCommand;
 import com.javalec.team.dao.SelectDetail_dao;
 import com.javalec.team.dto.ProductDetail_dto;
 
-public class StudentDetail_Command implements PCommand {
+public class OfficeDetail_Command implements PCommand {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 
 		
-		String pCode = request.getParameter("pCode");
+		String spCode = request.getParameter("pCode");
 		SelectDetail_dao dao = new SelectDetail_dao();
-		ProductDetail_dto dto = dao.student(pCode);
+		ProductDetail_dto dto = dao.office(spCode);
 		
-		request.setAttribute("studentDetail", dto);
-		
+		request.setAttribute("office", dto);
 	}
 
 }

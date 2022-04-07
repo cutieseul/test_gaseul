@@ -9,12 +9,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.javalec.team.command.AllCategory_Command;
+import com.javalec.team.command.AllDetail_Command;
 import com.javalec.team.command.InteriorCategory_Command;
+import com.javalec.team.command.InteriorDetail_Command;
 import com.javalec.team.command.OfficeCategory_Command;
+import com.javalec.team.command.OfficeDetail_Command;
 import com.javalec.team.command.PCommand;
 import com.javalec.team.command.ServiceCenter1vs1_Command;
 import com.javalec.team.command.StoolCategory_Command;
+import com.javalec.team.command.StoolDetail_Command;
 import com.javalec.team.command.StudentCategory_Command;
+import com.javalec.team.command.StudentDetail_Command;
 
 /**
  * Servlet implementation class homecontroller
@@ -76,7 +82,17 @@ public class homecontroller extends HttpServlet {
 			viewPage = "serviceCenterWrite.jsp";
 			break;
 			
+			
+			
+			
 			// category.do
+			
+		case("/allCategory.do"): 
+			command = new AllCategory_Command();
+			command.execute(request, response);
+			viewPage = "allcategory.jsp";
+			break;
+			
 		case("/studentCategory.do"): 
 			command = new StudentCategory_Command();
 			command.execute(request, response);
@@ -103,31 +119,43 @@ public class homecontroller extends HttpServlet {
 			break;
 			//category.do - end
 			
+			
+			
 			//DetailPage.do
-		case("/studentDetail.do"): 
-			command = new StudentCategory_Command();
+			
+		case("/allDetail.do"): 
+			command = new AllDetail_Command();
 			command.execute(request, response);
-			viewPage = "studentCategory.jsp";
+			viewPage = "alldetail.jsp";
+			break;
+			
+		case("/studentDetail.do"): 
+			command = new StudentDetail_Command();
+			command.execute(request, response);
+			viewPage = "studentDetail.jsp";
 			break;
 			
 			
 		case("/officeDetail.do"): 
-			command = new OfficeCategory_Command();
+			command = new OfficeDetail_Command();
 			command.execute(request, response);
-			viewPage = "officeCategory.jsp";
+			viewPage = "officeDetail.jsp";
 			break;
 			
 		case("/interiorDetail.do"): 
-			command = new InteriorCategory_Command();
+			command = new InteriorDetail_Command();
 			command.execute(request, response);
-			viewPage = "interiorCategory.jsp";
+			viewPage = "interiorDetail.jsp";
 			break;
 			
 		case("/stoolDetail.do"): 
-			command = new StoolCategory_Command();
+			command = new StoolDetail_Command();
 			command.execute(request, response);
-			viewPage = "stoolCategory.jsp";
+			viewPage = "stoolDetail.jsp";
 			break;
+			//DetailPage.do - end
+			
+			
 		} // switch(com)
 		
 		

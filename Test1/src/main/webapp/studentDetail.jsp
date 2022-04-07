@@ -112,12 +112,12 @@
 	
 	<div class="row" style="padding-left: 500px;">
 		<div class="col-md-6" style="width: 324px;">
-		<img src="${studentDetail.pImg_main }" width="350">
-		<h6>${studentDetail.pCode }</h6>
-		<button type="button" class="btn btn-default btn-xs" disabled="disabled">${studentDetail.pQuantity }</button>
+		<img src="${detail.pImg_main }" width="350">
+		<h6>${detail.pCode }</h6>
+		<button type="button" class="btn btn-default btn-xs" disabled="disabled">${detail.pQuantity }</button>
 		</div>
 		<div class="col-md-6" style="padding-bottom: 156px;border-left-width: 0px;padding-left: 67px;">
-			<div><h5 style="padding-top: 27px;">${studentDetail.pName } </h5></div>
+			<div><h5 style="padding-top: 27px;">${detail.pName } </h5></div>
 			<div style="padding-top: 143px;">
 			<h2>59000 원</h2>
 			<a class="cart btn btn-default btn-lg" href="#" role="button">장바구니</a>
@@ -132,7 +132,7 @@
 
 	<!-- 상세정보 Start -->
 	<div style="padding-left: 407px;padding-top: 147px;">
-	<div ><img src="">${studentDetail.pImg_detail }</div>
+	<div ><img src="${detail.pImg_detail }"></div>
 	</div>
 	<!-- 상세정보 End -->
 	
