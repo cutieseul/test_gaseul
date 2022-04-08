@@ -9,26 +9,36 @@ public class ProductReview_dto {
 	String pName;
 	String pImg_main;
 	String pQuantity;
+	String pPrice;
 	
 	//Constructor
 	public ProductReview_dto() {
 		
 	}
-
-	public ProductReview_dto(String pCode, String pCategoryname, String pName, String pImg_main, String pQuantity) {
+	
+	
+	
+	
+	
+	//
+	public ProductReview_dto(String pCode, String pCategoryname, String pName, String pImg_main, String pQuantity,
+			String pPrice) {
 		super();
 		this.pCode = pCode;
 		this.pCategoryname = pCategoryname;
 		this.pName = pName;
 		this.pImg_main = pImg_main;
 		this.pQuantity = pQuantity;
+		this.pPrice = pPrice;
 	}
 
 	
 	
 	
 	
-	//method
+	
+	
+	//
 	public String getpCode() {
 		return pCode;
 	}
@@ -69,9 +79,14 @@ public class ProductReview_dto {
 		this.pQuantity = pQuantity;
 	}
 
-	
+	public String getpPrice() {
+		return pPrice;
+	}
 
-	
+	public void setpPrice(String pPrice) {
+		this.pPrice = pPrice;
+	}
+
 	
 	
 	

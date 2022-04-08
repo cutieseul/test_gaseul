@@ -7,26 +7,34 @@ public class ProductDetail_dto {
 	String pImg_main;
 	String pName;
 	String pQuantity;
+	String pPrice;
 	
+	
+	//c
 	
 	public ProductDetail_dto() {
 		
 	}
 
 
-	//c
-	public ProductDetail_dto(String pCode, String pImg_detail, String pImg_main, String pName, String pQuantity) {
+	public ProductDetail_dto(String pCode, String pImg_detail, String pImg_main, String pName, String pQuantity,
+			String pPrice) {
 		super();
 		this.pCode = pCode;
 		this.pImg_detail = pImg_detail;
 		this.pImg_main = pImg_main;
 		this.pName = pName;
 		this.pQuantity = pQuantity;
+		this.pPrice = pPrice;
 	}
 
 
 	
+	
+	
 	//m
+	
+	
 	public String getpCode() {
 		return pCode;
 	}
@@ -75,10 +83,19 @@ public class ProductDetail_dto {
 	public void setpQuantity(String pQuantity) {
 		this.pQuantity = pQuantity;
 	}
-	
-	
-	
-	
+
+
+	public String getpPrice() {
+		return pPrice;
+	}
+
+
+	public void setpPrice(String pPrice) {
+		this.pPrice = pPrice;
+	}
+
+
+
 	
 	
 	

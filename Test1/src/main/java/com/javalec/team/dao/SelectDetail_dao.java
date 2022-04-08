@@ -34,7 +34,7 @@ public class SelectDetail_dao {
 		
 		try {
 			connection = dataSource.getConnection();
-			String query = "select pCode, pImg_detail, pImg_main, pName, pQuantity from product where pCode = ?";
+			String query = "select pCode, pImg_detail, pImg_main, pName, pQuantity, pPrice from product where pCode = ?";
 			preparedStatement = connection.prepareStatement(query);
 			preparedStatement.setString(1, spCode);
 			resultSet = preparedStatement.executeQuery();
@@ -46,8 +46,9 @@ public class SelectDetail_dao {
 				String pImg_main = resultSet.getString("pImg_main");
 				String pName = resultSet.getString("pName");
 				String pQuantity = resultSet.getString("pQuantity");
+				String pPrice = resultSet.getString("pPrice");
 				
-				dto = new ProductDetail_dto(pCode, pImg_detail, pImg_main, pName, pQuantity);
+				dto = new ProductDetail_dto (pCode, pImg_detail, pImg_main, pName, pQuantity, pPrice);
 			}
 			
 		} catch (Exception e) {
@@ -74,7 +75,7 @@ public class SelectDetail_dao {
 		
 		try {
 			connection = dataSource.getConnection();
-			String query = "select pCode, pImg_detail, pImg_main, pName, pQuantity from product where pCode = ?";
+			String query = "select pCode, pImg_detail, pImg_main, pName, pQuantity, pPrice from product where pCode = ?";
 			preparedStatement = connection.prepareStatement(query);
 			preparedStatement.setString(1, spCode);
 			resultSet = preparedStatement.executeQuery();
@@ -86,8 +87,9 @@ public class SelectDetail_dao {
 				String pImg_main = resultSet.getString("pImg_main");
 				String pName = resultSet.getString("pName");
 				String pQuantity = resultSet.getString("pQuantity");
+				String pPrice = resultSet.getString("pPrice");
 				
-				dto = new ProductDetail_dto(pCode, pImg_detail, pImg_main, pName, pQuantity);
+				dto = new ProductDetail_dto(pCode, pImg_detail, pImg_main, pName, pQuantity, pPrice);
 			}
 			
 		} catch (Exception e) {
@@ -116,7 +118,7 @@ public class SelectDetail_dao {
 		
 		try {
 			connection = dataSource.getConnection();
-			String query = "select pCode, pImg_detail, pImg_main, pName, pQuantity from product where pCode = ?";
+			String query = "select pCode, pImg_detail, pImg_main, pName, pQuantity, pPrice from product where pCode = ?";
 			preparedStatement = connection.prepareStatement(query);
 			preparedStatement.setString(1, spCode);
 			resultSet = preparedStatement.executeQuery();
@@ -128,8 +130,9 @@ public class SelectDetail_dao {
 				String pImg_main = resultSet.getString("pImg_main");
 				String pName = resultSet.getString("pName");
 				String pQuantity = resultSet.getString("pQuantity");
+				String pPrice = resultSet.getString("pPrice");
 				
-				dto = new ProductDetail_dto(pCode, pImg_detail, pImg_main, pName, pQuantity);
+				dto = new ProductDetail_dto(pCode, pImg_detail, pImg_main, pName, pQuantity, pPrice);
 			}
 			
 		} catch (Exception e) {
@@ -158,7 +161,7 @@ public class SelectDetail_dao {
 		
 		try {
 			connection = dataSource.getConnection();
-			String query = "select pCode, pImg_detail, pImg_main, pName, pQuantity from product where pCode = ?";
+			String query = "select pCode, pImg_detail, pImg_main, pName, pQuantity, pPrice from product where pCode = ?";
 			preparedStatement = connection.prepareStatement(query);
 			preparedStatement.setString(1, spCode);
 			resultSet = preparedStatement.executeQuery();
@@ -170,8 +173,9 @@ public class SelectDetail_dao {
 				String pImg_main = resultSet.getString("pImg_main");
 				String pName = resultSet.getString("pName");
 				String pQuantity = resultSet.getString("pQuantity");
+				String pPrice = resultSet.getString("pPrice");
 				
-				dto = new ProductDetail_dto(pCode, pImg_detail, pImg_main, pName, pQuantity);
+				dto = new ProductDetail_dto(pCode, pImg_detail, pImg_main, pName, pQuantity, pPrice);
 			}
 			
 		} catch (Exception e) {
@@ -200,7 +204,7 @@ public class SelectDetail_dao {
 		
 		try {
 			connection = dataSource.getConnection();
-			String query = "select pCode, pImg_detail, pImg_main, pName, pQuantity from product where pCode = ?";
+			String query = "select pCode, pImg_detail, pImg_main, pName, pQuantity, pPrice from product where pCode = ?";
 			preparedStatement = connection.prepareStatement(query);
 			preparedStatement.setString(1, spCode);
 			resultSet = preparedStatement.executeQuery();
@@ -212,8 +216,9 @@ public class SelectDetail_dao {
 				String pImg_main = resultSet.getString("pImg_main");
 				String pName = resultSet.getString("pName");
 				String pQuantity = resultSet.getString("pQuantity");
+				String pPrice = resultSet.getString("pPrice");
 				
-				dto = new ProductDetail_dto(pCode, pImg_detail, pImg_main, pName, pQuantity);
+				dto = new ProductDetail_dto(pCode, pImg_detail, pImg_main, pName, pQuantity, pPrice);
 			}
 			
 		} catch (Exception e) {

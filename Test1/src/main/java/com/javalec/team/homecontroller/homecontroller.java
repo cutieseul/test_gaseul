@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.javalec.team.command.AllCategory_Command;
 import com.javalec.team.command.AllDetail_Command;
+import com.javalec.team.command.InsertCart_Command;
 import com.javalec.team.command.InteriorCategory_Command;
 import com.javalec.team.command.InteriorDetail_Command;
 import com.javalec.team.command.OfficeCategory_Command;
@@ -157,6 +158,11 @@ public class homecontroller extends HttpServlet {
 			break;
 			//DetailPage.do - end
 			
+		case("/cartin.do"): 
+			command = new InsertCart_Command();
+			command.execute(request, response);
+			viewPage = "allCategory.do";
+			break;
 			
 		} // switch(com)
 		
