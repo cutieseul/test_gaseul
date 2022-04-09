@@ -161,7 +161,7 @@ public class homecontroller extends HttpServlet {
 		case("/cartin.do"): 
 			command = new InsertCart_Command();
 			command.execute(request, response);
-			viewPage = "allCategory.do";
+			viewPage = "wishlist.do";
 			break;
 			
 		} // switch(com)
