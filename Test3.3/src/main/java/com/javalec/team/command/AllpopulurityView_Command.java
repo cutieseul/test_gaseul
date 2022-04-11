@@ -15,6 +15,7 @@ public class AllpopulurityView_Command implements PCommand {
 		// TODO Auto-generated method stub
 		String startnum =request.getParameter("startnum");
 		String endnum= request.getParameter("endnum");
+		
 		SelectCategory_dao dao = new SelectCategory_dao();
 		ArrayList<ProductReview_dto> dtos = dao.allpopulurityView(startnum, endnum);
 		
