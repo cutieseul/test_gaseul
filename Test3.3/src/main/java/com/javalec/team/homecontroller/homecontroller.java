@@ -10,8 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.javalec.team.command.Adduser_Command;
+import com.javalec.team.command.AllCategoryPage_Command;
 import com.javalec.team.command.AllCategory_Command;
 import com.javalec.team.command.AllDetail_Command;
+import com.javalec.team.command.AllascendView_Command;
+import com.javalec.team.command.AlldescendView_Command;
+import com.javalec.team.command.AllpopulurityView_Command;
 import com.javalec.team.command.Click_Command;
 import com.javalec.team.command.Finduserid_Command;
 import com.javalec.team.command.Finduserpw_Command;
@@ -200,7 +204,29 @@ public class homecontroller extends HttpServlet {
 					viewPage = "allCategory.jsp";
 					break;
 					
+				case("/allCategoryPage.do"): 
+					command = new AllCategoryPage_Command();
+					command.execute(request, response);
+					viewPage = "allCategory.jsp";
+					break;
 					
+				case("/populurityView.do"): 
+					command = new AllpopulurityView_Command();
+					command.execute(request, response);
+					viewPage = "allCategory.jsp";
+					break;
+					
+				case("/ascendView.do"): 
+					command = new AllascendView_Command();
+					command.execute(request, response);
+					viewPage = "allCategory.jsp";
+					break;
+					
+				case("/descendView.do"): 
+					command = new AlldescendView_Command();
+					command.execute(request, response);
+					viewPage = "allCategory.jsp";
+					break;
 					
 				case("/studentCategory.do"): 
 					command = new StudentCategory_Command();

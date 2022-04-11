@@ -107,10 +107,31 @@ img {
 	</section>
 	<!-- Bread Crumb End -->
 	
+	
+	<!-- pagnation start-->
+   
+	<!-- pagnation End-->
+	
+	
+	<!-- 정렬하기 start -->
+	
+	<div id="product_order_list">
+			<p>
+			<a href="allCategory.do">전체보기</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<a href="populurityView.do">인기순</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<a href="ascendView.do">낮은 가격 순</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<a href="descendView.do">높은 가격 순</a> </p>
+	</div>
+	
+	<!-- 정렬하기 End -->
+	
+	
+	
+	
 	<!-- 스툴 / 바 의자 카테고리 Start -->
 	<div align=center><!-- 화면 가운데 정렬 -->
 		<div class="row row-cols-3 row-cols-md-3 g-4 mb-5"  style="width: 70rem;">
-			<c:forEach items="${list}" var="dto">
+			<c:forEach items="${list}" var="dto" varStatus="status">
 		  		<div class="col">
 		  		<div class="card-header">
 				   <h6>시디즈</h6>
@@ -132,7 +153,34 @@ img {
 			</c:forEach>
 		</div>
 	</div>
+	 
 	<!-- 스툴 / 바 의자 카테고리 End -->
+	<%
+	
+	
+	String array = (String) request.getAttribute("array");
+	String arrayurl = "";
+	
+	if(array.equals("all")){
+		arrayurl = "allCategory.do";
+	}else if(array.eqauls("popular")){
+		arrayurl = "populurityView.do";
+	}else if(array.eqauls("ascend")){
+		arrayurl = "ascendView.do";
+	}else if(array.eqauls("descend")){
+		arrayurl = "descendView.do";
+	}
+		
+	
+	int contentNum = 6;
+	
+	%>
+	<%
+		for(int i = 1 ; i <=9 ; i++){
+			
+	%>
+	<a href= "<%arrayurl%>?startnum=<%=contentNum*i%>&endnum=<%=contentNum%>"><%=i %></a>
+	<%} %>
 	
 	<!-- Footer start -->
 	<footer >

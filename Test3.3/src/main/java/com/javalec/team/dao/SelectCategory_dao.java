@@ -27,7 +27,95 @@ public class SelectCategory_dao {
 	
 	
 	
-	public ArrayList<ProductReview_dto> all(){
+	public ArrayList<ProductReview_dto> all(String startnum, String endnum){
+		ArrayList<ProductReview_dto> dtos = new ArrayList<ProductReview_dto>();
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
+	
+		try {
+			connection = dataSource.getConnection();
+			String query = "select pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick from product limit " + startnum + "," + endnum;
+			preparedStatement = connection.prepareStatement(query);
+			
+	
+			resultSet = preparedStatement.executeQuery();
+			
+			while(resultSet.next()) {
+				String pCode = resultSet.getString("pCode");
+				String pCategoryname = resultSet.getString("pCategoryname");
+				String pName = resultSet.getString("pName");
+				String pImg_main = resultSet.getString("pImg_main");
+				String pQuantity = resultSet.getString("pQuantity");
+				String pPrice = resultSet.getString("pPrice");
+				int pClick = resultSet.getInt("pClick");
+				
+				ProductReview_dto dto = new ProductReview_dto(pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick);
+				
+				dtos.add(dto);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			// �뵠 湲� �뵠  �뿳椰�   毓얍쳞  簾ル뗀�걟�뵳   �젟�뵳 	
+			try {
+				if(resultSet != null) resultSet.close();
+				if(preparedStatement != null) preparedStatement.close();
+				if(connection != null) connection.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return dtos;
+	} //list end
+	
+	public ArrayList<ProductReview_dto> allCategoryPage(){
+		ArrayList<ProductReview_dto> dtos = new ArrayList<ProductReview_dto>();
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
+	
+		try {
+			connection = dataSource.getConnection();
+			String query = "select pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick from product limit " + startnum + "," + endnum;
+			preparedStatement = connection.prepareStatement(query);
+			
+	
+			resultSet = preparedStatement.executeQuery();
+			
+			while(resultSet.next()) {
+				String pCode = resultSet.getString("pCode");
+				String pCategoryname = resultSet.getString("pCategoryname");
+				String pName = resultSet.getString("pName");
+				String pImg_main = resultSet.getString("pImg_main");
+				String pQuantity = resultSet.getString("pQuantity");
+				String pPrice = resultSet.getString("pPrice");
+				int pClick = resultSet.getInt("pClick");
+				
+				ProductReview_dto dto = new ProductReview_dto(pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick);
+				
+				dtos.add(dto);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			// �뵠 湲� �뵠  �뿳椰�   毓얍쳞  簾ル뗀�걟�뵳   �젟�뵳 	
+			try {
+				if(resultSet != null) resultSet.close();
+				if(preparedStatement != null) preparedStatement.close();
+				if(connection != null) connection.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return dtos;
+	} //list end
+	
+	
+
+	public ArrayList<ProductReview_dto> allpopulurityView(String startnum, String endnum){
 		ArrayList<ProductReview_dto> dtos = new ArrayList<ProductReview_dto>();
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -35,7 +123,7 @@ public class SelectCategory_dao {
 		
 		try {
 			connection = dataSource.getConnection();
-			String query = "select pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick from product";
+			String query = "select pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick from product order by pClick desc limit " + startnum + "," + endnum;
 			preparedStatement = connection.prepareStatement(query);
 			resultSet = preparedStatement.executeQuery();
 			
@@ -69,8 +157,87 @@ public class SelectCategory_dao {
 	} //list end
 	
 	
+	public ArrayList<ProductReview_dto> allascendView(String startnum, String endnum){
+		ArrayList<ProductReview_dto> dtos = new ArrayList<ProductReview_dto>();
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
+		
+		try {
+			connection = dataSource.getConnection();
+			String query = "select pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick from product order by pPrice limit " + startnum + "," + endnum;
+			preparedStatement = connection.prepareStatement(query);
+			resultSet = preparedStatement.executeQuery();
+			
+			while(resultSet.next()) {
+				String pCode = resultSet.getString("pCode");
+				String pCategoryname = resultSet.getString("pCategoryname");
+				String pName = resultSet.getString("pName");
+				String pImg_main = resultSet.getString("pImg_main");
+				String pQuantity = resultSet.getString("pQuantity");
+				String pPrice = resultSet.getString("pPrice");
+				int pClick = resultSet.getInt("pClick");
+				
+				ProductReview_dto dto = new ProductReview_dto(pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick);
+				
+				dtos.add(dto);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			// �뵠 湲� �뵠  �뿳椰�   毓얍쳞  簾ル뗀�걟�뵳   �젟�뵳 	
+			try {
+				if(resultSet != null) resultSet.close();
+				if(preparedStatement != null) preparedStatement.close();
+				if(connection != null) connection.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return dtos;
+	} //list end
 	
-	
+	public ArrayList<ProductReview_dto> alldescendView(String startnum, String endnum){
+		ArrayList<ProductReview_dto> dtos = new ArrayList<ProductReview_dto>();
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
+		
+		try {
+			connection = dataSource.getConnection();
+			String query = "select pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick from product order by pPrice desc limit '" + startnum + "," + endnum;
+			preparedStatement = connection.prepareStatement(query);
+			resultSet = preparedStatement.executeQuery();
+			
+			while(resultSet.next()) {
+				String pCode = resultSet.getString("pCode");
+				String pCategoryname = resultSet.getString("pCategoryname");
+				String pName = resultSet.getString("pName");
+				String pImg_main = resultSet.getString("pImg_main");
+				String pQuantity = resultSet.getString("pQuantity");
+				String pPrice = resultSet.getString("pPrice");
+				int pClick = resultSet.getInt("pClick");
+				
+				ProductReview_dto dto = new ProductReview_dto(pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick);
+				
+				dtos.add(dto);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			// �뵠 湲� �뵠  �뿳椰�   毓얍쳞  簾ル뗀�걟�뵳   �젟�뵳 	
+			try {
+				if(resultSet != null) resultSet.close();
+				if(preparedStatement != null) preparedStatement.close();
+				if(connection != null) connection.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return dtos;
+	} //list end
 	
 	public ArrayList<ProductReview_dto> slist(){
 		ArrayList<ProductReview_dto> dtos = new ArrayList<ProductReview_dto>();
