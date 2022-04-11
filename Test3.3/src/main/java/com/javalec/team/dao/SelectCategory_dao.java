@@ -78,9 +78,10 @@ public class SelectCategory_dao {
 	
 		try {
 			connection = dataSource.getConnection();
-			String query = "select pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick from product limit " + startnum + "," + endnum;
+			String query = "select pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick from product limit " +  + "," + endnum;
 			preparedStatement = connection.prepareStatement(query);
-			
+			int p1 = 0;
+			int p2 = 6;
 	
 			resultSet = preparedStatement.executeQuery();
 			
