@@ -14,11 +14,9 @@ public class AllCategoryPage_Command implements PCommand {
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 
-		String startnum =request.getParameter("startnum");
-		String endnum= request.getParameter("endnum");
-		
+	
 		SelectCategory_dao dao = new SelectCategory_dao();
-		ArrayList<ProductReview_dto> dtos = dao.allCategoryPage(startnum, endnum);
+		ArrayList<ProductReview_dto> dtos = dao.allCategoryPage();
 		request.setAttribute("list", dtos);
 		
 		
