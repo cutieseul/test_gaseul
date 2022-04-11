@@ -113,6 +113,9 @@ public class SelectDetail_dao {
 		return dtos;
 	} //list end
 	
+	
+	
+	
 	public void clickadd(String id, int sclick) {
 		
 		

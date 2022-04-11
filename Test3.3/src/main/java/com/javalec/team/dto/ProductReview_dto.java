@@ -10,19 +10,15 @@ public class ProductReview_dto {
 	String pImg_main;
 	String pQuantity;
 	String pPrice;
+	int pClick;
 	
 	//Constructor
 	public ProductReview_dto() {
 		
 	}
-	
-	
-	
-	
-	
-	//
+
 	public ProductReview_dto(String pCode, String pCategoryname, String pName, String pImg_main, String pQuantity,
-			String pPrice) {
+			String pPrice, int pClick) {
 		super();
 		this.pCode = pCode;
 		this.pCategoryname = pCategoryname;
@@ -30,15 +26,12 @@ public class ProductReview_dto {
 		this.pImg_main = pImg_main;
 		this.pQuantity = pQuantity;
 		this.pPrice = pPrice;
+		this.pClick = pClick;
 	}
 
 	
 	
 	
-	
-	
-	
-	//
 	public String getpCode() {
 		return pCode;
 	}
@@ -87,11 +80,19 @@ public class ProductReview_dto {
 		this.pPrice = pPrice;
 	}
 
+	public int getpClick() {
+		return pClick;
+	}
+
+	public void setpClick(int pClick) {
+		this.pClick = pClick;
+	}
 	
 	
 	
 	
 	
+
 	
 	
 }

@@ -35,7 +35,7 @@ public class SelectCategory_dao {
 		
 		try {
 			connection = dataSource.getConnection();
-			String query = "select pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice from product";
+			String query = "select pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick from product";
 			preparedStatement = connection.prepareStatement(query);
 			resultSet = preparedStatement.executeQuery();
 			
@@ -46,8 +46,9 @@ public class SelectCategory_dao {
 				String pImg_main = resultSet.getString("pImg_main");
 				String pQuantity = resultSet.getString("pQuantity");
 				String pPrice = resultSet.getString("pPrice");
+				int pClick = resultSet.getInt("pClick");
 				
-				ProductReview_dto dto = new ProductReview_dto(pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice);
+				ProductReview_dto dto = new ProductReview_dto(pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick);
 				
 				dtos.add(dto);
 			}
@@ -79,7 +80,7 @@ public class SelectCategory_dao {
 		
 		try {
 			connection = dataSource.getConnection();
-			String query = "select pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice from product where pCategoryname = '학생용 의자'";
+			String query = "select pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick from product where pCategoryname = '학생용 의자'";
 			preparedStatement = connection.prepareStatement(query);
 			resultSet = preparedStatement.executeQuery();
 			
@@ -90,8 +91,9 @@ public class SelectCategory_dao {
 				String pImg_main = resultSet.getString("pImg_main");
 				String pQuantity = resultSet.getString("pQuantity");
 				String pPrice = resultSet.getString("pPrice");
-				
-				ProductReview_dto dto = new ProductReview_dto(pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice);
+				int pClick = resultSet.getInt("pClick");
+
+				ProductReview_dto dto = new ProductReview_dto(pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick);
 				
 				dtos.add(dto);
 			}
@@ -123,7 +125,7 @@ public class SelectCategory_dao {
 		
 		try {
 			connection = dataSource.getConnection();
-			String query = "select pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice from product where pCategoryname = '인테리어용 의자'";
+			String query = "select pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick from product where pCategoryname = '인테리어용 의자'";
 			preparedStatement = connection.prepareStatement(query);
 			resultSet = preparedStatement.executeQuery();
 			
@@ -134,8 +136,9 @@ public class SelectCategory_dao {
 				String pImg_main = resultSet.getString("pImg_main");
 				String pQuantity = resultSet.getString("pQuantity");
 				String pPrice = resultSet.getString("pPrice");
-				
-				ProductReview_dto dto = new ProductReview_dto(pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice);
+				int pClick = resultSet.getInt("pClick");
+
+				ProductReview_dto dto = new ProductReview_dto(pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick);
 				
 				dtos.add(dto);
 			}
@@ -167,7 +170,7 @@ public class SelectCategory_dao {
 		
 		try {
 			connection = dataSource.getConnection();
-			String query = "select pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice from product where pCategoryname = '사무용 의자'";
+			String query = "select pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick from product where pCategoryname = '사무용 의자'";
 			preparedStatement = connection.prepareStatement(query);
 			resultSet = preparedStatement.executeQuery();
 			
@@ -178,8 +181,9 @@ public class SelectCategory_dao {
 				String pImg_main = resultSet.getString("pImg_main");
 				String pQuantity = resultSet.getString("pQuantity");
 				String pPrice = resultSet.getString("pPrice");
-				
-				ProductReview_dto dto = new ProductReview_dto(pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice);
+				int pClick = resultSet.getInt("pClick");
+
+				ProductReview_dto dto = new ProductReview_dto(pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick);
 				
 				dtos.add(dto);
 			}
@@ -211,7 +215,7 @@ public class SelectCategory_dao {
 		
 		try {
 			connection = dataSource.getConnection();
-			String query = "select pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice from product where pCategoryname = '스툴/좌식 의자'";
+			String query = "select pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick from product where pCategoryname = '스툴/좌식 의자'";
 			preparedStatement = connection.prepareStatement(query);
 			resultSet = preparedStatement.executeQuery();
 			
@@ -222,8 +226,9 @@ public class SelectCategory_dao {
 				String pImg_main = resultSet.getString("pImg_main");
 				String pQuantity = resultSet.getString("pQuantity");
 				String pPrice = resultSet.getString("pPrice");
-				
-				ProductReview_dto dto = new ProductReview_dto(pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice);
+				int pClick = resultSet.getInt("pClick");
+
+				ProductReview_dto dto = new ProductReview_dto(pCode, pCategoryname, pName, pImg_main, pQuantity, pPrice, pClick);
 				
 				dtos.add(dto);
 			}

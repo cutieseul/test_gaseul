@@ -114,6 +114,7 @@
 	
 	<div class="row" style="padding-left: 500px;">
 		<div class="col-md-6" style="width: 324px;">
+		조회수 : ${detail.pClick }
 		<img src="${detail.pImg_main }" width="350">
 		<h6>${detail.pCode }</h6>
 		<button type="button" class="btn btn-default btn-xs" disabled="disabled">${detail.pQuantity }</button>
@@ -157,7 +158,7 @@
 
 	<!-- 상세정보 Start -->
 	<div style="padding-left: 407px;padding-top: 147px;">
-	<div ><img src="${office.pImg_detail }"></div>
+	<div ><img src="${detail.pImg_detail }"></div>
 	</div>
 	<!-- 상세정보 End -->
 	

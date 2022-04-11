@@ -228,10 +228,11 @@ public class homecontroller extends HttpServlet {
 					break;
 					//category.do - end
 					
-					//DetailPage.do
 					
+					
+					//DetailPage.do - start
 				case("/allDetail.do"): 
-					
+					//click
 					command = new Click_Command();
 					command.execute(request, response);
 					
@@ -241,25 +242,40 @@ public class homecontroller extends HttpServlet {
 					break;
 					
 				case("/studentDetail.do"): 
+					//click
+					command = new Click_Command();
+					command.execute(request, response);
+				
 					command = new StudentDetail_Command();
 					command.execute(request, response);
 					viewPage = "studentDetail.jsp";
 					break;
 					
-					
 				case("/officeDetail.do"): 
+					//click
+					command = new Click_Command();
+					command.execute(request, response);
+				
 					command = new OfficeDetail_Command();
 					command.execute(request, response);
 					viewPage = "officeDetail.jsp";
 					break;
 					
 				case("/interiorDetail.do"): 
+					//click
+					command = new Click_Command();
+					command.execute(request, response);
+				
 					command = new InteriorDetail_Command();
 					command.execute(request, response);
 					viewPage = "interiorDetail.jsp";
 					break;
 					
 				case("/stoolDetail.do"): 
+					//click
+					command = new Click_Command();
+					command.execute(request, response);
+				
 					command = new StoolDetail_Command();
 					command.execute(request, response);
 					viewPage = "stoolDetail.jsp";

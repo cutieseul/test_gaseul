@@ -124,7 +124,8 @@ img {
 			    </div>
 				<div class="card-footer">
 				  <small class="text" style="text-align:right;"><i class="fa-solid fa-won-sign"></i>${dto.pPrice}</small><br>
-				  <small class="text"  style="text-align:right;">재고 : ${dto.pQuantity}</small>
+				  <small class="text"  style="text-align:right;">재고 : ${dto.pQuantity}</small><br>
+				  <small class="text"  style="text-align:right;">조회수 : ${dto.pClick}</small>
 				</div>
 			   </div>
 			  </div>

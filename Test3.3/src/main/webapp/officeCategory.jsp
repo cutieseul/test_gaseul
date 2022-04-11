@@ -116,7 +116,7 @@ img {
 				   <h6>시디즈</h6>
 				</div>
 		   		<div class="card">
-		   			<a href="officeDetail.do?pCode=${dto.pCode}">
+		   			<a href="officeDetail.do?pCode=${dto.pCode}&pClick=${dto.pClick}">
 		      		<img src="${dto.pImg_main}" class="rounded" class="card-img-top" style="">
 		   			</a>
 		      	<div class="card-body">
@@ -124,7 +124,8 @@ img {
 			    </div>
 				<div class="card-footer">
 				  <small class="text" style="text-align:right;"><i class="fa-solid fa-won-sign"></i>${dto.pPrice}</small><br>
-				  <small class="text"  style="text-align:right;">재고 : ${dto.pQuantity}</small>
+				  <small class="text"  style="text-align:right;">재고 : ${dto.pQuantity}</small><br>
+				   <small class="text"  style="text-align:right;">조회수 : ${dto.pClick}</small>
 				</div>
 			   </div>
 			  </div>
