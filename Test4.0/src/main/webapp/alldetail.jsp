@@ -119,7 +119,6 @@
 		조회수 : ${detail.pClick }
 		<img src="${detail.pImg_main }" width="350">
 		<h6>${detail.pCode }</h6>
-		<button type="button" class="btn btn-default btn-xs" disabled="disabled">${detail.pQuantity }</button>
 		</div>
 		<div class="col-md-6" style="padding-bottom: 156px;border-left-width: 0px;padding-left: 67px;">
 			<div><h5 style="padding-top: 27px;">${detail.pName } </h5></div>
@@ -163,7 +162,9 @@
 	</div>
 	<!-- 상세정보 End -->
 	
-	
+	<!-- information -->
+	<div><img src="./img/information.jpg"></div>
+	<!-- information -->
 	
 	
 	<!-- Footer start -->

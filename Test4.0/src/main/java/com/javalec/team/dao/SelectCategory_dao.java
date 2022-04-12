@@ -159,7 +159,7 @@ public class SelectCategory_dao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			// 占쎈턄 疫뀐옙 占쎈턄  占쎈엿濾곤옙   驪볦뼃爾�  癲╉꺂��占쎄콫占쎈뎨   占쎌젧占쎈뎨 	
+			
 			try {
 				if(resultSet != null) resultSet.close();
 				if(preparedStatement != null) preparedStatement.close();
