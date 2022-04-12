@@ -134,6 +134,24 @@ img {
 	</div>	
 	<!-- 오피스 의자 카테고리 End -->
 	
+	
+	<!-- pagination start -->
+	<a href="officeCategory.do?">1</a>
+	
+	<%	
+	
+	int contentNum = 6;
+	
+	
+	int i = 1 ; 
+			
+	%>
+	<a href= "officeCategoryPage.do?startnum=<%=contentNum*i%>&endnum=<%=contentNum%>"><%=i+1 %></a>
+
+	<!-- pagination End -->
+	
+	
+	
 	<!-- Footer start -->
 	<footer >
 		<div class="card" style="background-color: #696464; color: #E9E5DD;">

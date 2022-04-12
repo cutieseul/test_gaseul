@@ -108,7 +108,7 @@ img {
 	</section>
 	<!-- Bread Crumb End -->
 	
-	<!-- 스툴 / 바 의자 카테고리 Start -->
+	<!-- studentCategory Start -->
 	<div align=center>	
 		<div class="row row-cols-3 row-cols-md-3 g-4 mb-5"  style="width: 70rem;">
 			<c:forEach items="${list}" var="dto">
@@ -133,7 +133,26 @@ img {
 			</c:forEach>
 		</div>
 	</div>
-	<!-- 스툴 / 바 의자 카테고리 End -->
+	<!-- studentCategory End -->
+	
+	
+	
+	<!-- pagination start -->
+	<a href="studentCategory.do?">1</a>
+	
+	<%	
+	
+	int contentNum = 6;
+	
+	
+	int i = 1;
+			
+	%>
+	<a href= "studentCategoryPage.do?startnum=<%=contentNum*i%>&endnum=<%=contentNum%>"><%=i+1 %></a>
+	
+	<!-- pagination End -->
+	
+	
 	
 	<!-- Footer start -->
 	<footer >

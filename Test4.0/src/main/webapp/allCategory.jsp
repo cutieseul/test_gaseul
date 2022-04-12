@@ -121,7 +121,7 @@ img {
 	
 	
 	
-	<!-- 스툴 / 바 의자 카테고리 Start -->
+	<!-- all category Start -->
 	<div align=center><!-- 화면 가운데 정렬 -->
 		<div class="row row-cols-3 row-cols-md-3 g-4 mb-5"  style="width: 70rem;">
 			<c:forEach items="${list}" var="dto" varStatus="status">
@@ -147,8 +147,10 @@ img {
 		</div>
 	</div>
 	 
-	<!-- 스툴 / 바 의자 카테고리 End -->
+	<!--all category End -->
 	
+	
+	<!-- pagination start -->
 	<a href="allCategory.do?">1</a>
 	
 	<%	
@@ -156,11 +158,14 @@ img {
 	int contentNum = 6;
 	
 	
-	for(int i = 1 ; i <=9 ; i++){
+	for(int i = 1 ; i <=8 ; i++){
 			
 	%>
 	<a href= "allCategoryPage.do?startnum=<%=contentNum*i%>&endnum=<%=contentNum%>"><%=i+1 %></a>
 	<%} %>
+	<!-- pagination End -->
+	
+	
 	
 	<!-- Footer start -->
 	<footer >

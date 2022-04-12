@@ -19,12 +19,14 @@ import com.javalec.team.command.IdCheck_Command;
 import com.javalec.team.command.InsertCart_Command;
 import com.javalec.team.command.InsertRightPayment_Command;
 import com.javalec.team.command.InteriorCategory_Command;
+import com.javalec.team.command.InteriorCategoryyPage_Command;
 import com.javalec.team.command.InteriorDetail_Command;
 import com.javalec.team.command.Login_Command;
 import com.javalec.team.command.MPchange_Command;
 import com.javalec.team.command.MPdelete_Command;
 import com.javalec.team.command.MPinformation_Command;
 import com.javalec.team.command.OfficeCategory_Command;
+import com.javalec.team.command.OfficeCategoryyPage_Command;
 import com.javalec.team.command.OfficeDetail_Command;
 import com.javalec.team.command.OrderpageCategory_Command;
 import com.javalec.team.command.PCommand;
@@ -36,8 +38,10 @@ import com.javalec.team.command.ServiceCenter1vs1Detail_Command;
 import com.javalec.team.command.ServiceCenter1vs1_Command;
 import com.javalec.team.command.ServiceCenterWrite_Command;
 import com.javalec.team.command.StoolCategory_Command;
+import com.javalec.team.command.StoolCategoryyPage_Command;
 import com.javalec.team.command.StoolDetail_Command;
 import com.javalec.team.command.StudentCategory_Command;
+import com.javalec.team.command.StudentCategoryyPage_Command;
 import com.javalec.team.command.StudentDetail_Command;
 import com.javalec.team.command.Wishlist_Command;
 
@@ -210,7 +214,9 @@ public class homecontroller extends HttpServlet {
 		//留덉씠�럹�씠吏�(�닔�뿰�늻�굹) �걹
 		
 		//�젣�뭹(媛��뒳)�떆�옉
-		// allcategory.do
+			
+			
+		// allcategory - gaseul
 		
 				case("/allCategory.do"): 
 					command = new AllCategory_Command();
@@ -218,11 +224,53 @@ public class homecontroller extends HttpServlet {
 					viewPage = "allCategory.jsp";
 					break;
 				
-				case("/allCategoryPage.do"): 
+				case("/allCategoryPage.do"): //pagination
 					command = new AllCategoryPage_Command();
 					command.execute(request, response);
 					viewPage = "allCategory.jsp";
 					break;
+					
+					
+					case("/interiorCategory.do"): 
+					command = new InteriorCategory_Command();
+					command.execute(request, response);
+					viewPage = "interiorCategory.jsp";
+					break;
+					
+				case("/interiorCategoryPage.do"): //pagination
+					command = new InteriorCategoryyPage_Command();
+					command.execute(request, response);
+					viewPage = "interiorCategory.jsp";
+					break;
+				
+				
+					
+				case("/officeCategory.do"): 
+					command = new OfficeCategory_Command();
+					command.execute(request, response);
+					viewPage = "officeCategory.jsp";
+					break;
+					
+				case("/officeCategoryPage.do"): //pagination
+					command = new OfficeCategoryyPage_Command();
+					command.execute(request, response);
+					viewPage = "officeCategory.jsp";
+					break;
+						
+				
+					
+				case("/stoolCategory.do"): 
+					command = new StoolCategory_Command();
+					command.execute(request, response);
+					viewPage = "stoolCategory.jsp";
+					break;
+					
+				case("/stoolCategoryPage.do"): //pagination
+					command = new StoolCategoryyPage_Command();
+					command.execute(request, response);
+					viewPage = "stoolCategory.jsp";
+					break;
+				
 					
 					
 				case("/studentCategory.do"): 
@@ -231,27 +279,17 @@ public class homecontroller extends HttpServlet {
 					viewPage = "studentCategory.jsp";
 					break;
 					
-					
-				case("/officeCategory.do"): 
-					command = new OfficeCategory_Command();
-					command.execute(request, response);
-					viewPage = "officeCategory.jsp";
-					break;
-					
-				case("/interiorCategory.do"): 
-					command = new InteriorCategory_Command();
-					command.execute(request, response);
-					viewPage = "interiorCategory.jsp";
-					break;
-					
-				case("/stoolCategory.do"): 
-					command = new StoolCategory_Command();
-					command.execute(request, response);
-					viewPage = "stoolCategory.jsp";
-					break;
+				case("/studentCategoryPage.do"): //pagination
+					command = new StudentCategoryyPage_Command();
+				command.execute(request, response);
+				viewPage = "studentCategory.jsp";
+				break;
 					//category.do - end
 					
-					//DetailPage.do
+				
+				
+				
+					//DetailPage.do - gaseul
 					
 				case("/allDetail.do"): 
 					command = new AllDetail_Command();
@@ -284,6 +322,9 @@ public class homecontroller extends HttpServlet {
 					viewPage = "stoolDetail.jsp";
 					break;
 					//DetailPage.do - end
+					
+					
+					//cartIn
 				case("/cartin.do"): 
 					command = new InsertCart_Command();
 					command.execute(request, response);
@@ -295,6 +336,9 @@ public class homecontroller extends HttpServlet {
 	               command.execute(request, response);
 	               viewPage = "rightPayment.jsp";
 	               break;
+	               
+	               
+	               
 		//�젣�뭹(媛��뒳)�걹
 		
 		//�옣諛붽뎄�땲(���븷�늻�굹) �떆�옉
